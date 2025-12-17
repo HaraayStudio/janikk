@@ -22,7 +22,7 @@ import GalleryPage from "./pages/GalleryPage.jsx";
 const GlobalLayout = () => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <main style={{ minHeight: "100dvh" }}>
         {/* The Outlet renders the currently matched child Route element */}
         <Outlet />
@@ -43,7 +43,7 @@ function App() {
         */}
         <Route path="/" element={<GlobalLayout />}>
           {/* Define your page routes as children */}
-          <Route index element={<HomePage />} />{" "}
+          <Route index element={<GESPage />} />{" "}
           {/* index renders at the parent path "/" */}
           <Route path="about" element={<AboutUsPage />} />
           <Route path="contact" element={<ContactUsPage />} />
