@@ -1,5 +1,10 @@
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Outlet,
+} from "react-router-dom";
 
-<<<<<<< HEAD
 // Import Layout Components
 import Header from "./components/Header/Header.jsx";
 import Footer from "./components/Footer/Footer.jsx";
@@ -16,7 +21,7 @@ import GalleryPage from "./pages/GalleryPage.jsx";
 const GlobalLayout = () => {
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <main style={{ minHeight: "100dvh" }}>
         {/* The Outlet renders the currently matched child Route element */}
         <Outlet />
@@ -61,5 +66,3 @@ function App() {
 }
 
 export default App;
-=======
->>>>>>> 8a04a14268990729a5ce95ec143458fdffabebbf
