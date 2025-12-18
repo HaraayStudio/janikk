@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import styles from "./styles/AboutPage.module.scss";
 import ceoImage from "../assets/images/About/CeoImg.webp";
+import aaratiImage from "../assets/images/About/Aarati.webp";
 import HeroSec from "../assets/images/About/HeroSec.webp";
 
 const sectionVariants = {
@@ -60,7 +61,7 @@ const AboutFounderSection = () => {
         <div className={styles.top}>
           <motion.div className={styles.left} variants={fadeUp}>
             <span className={styles.kicker}>About the Firm</span>
-            <h2>Aarti Suryawanshi</h2>
+            <h2>Pooja Thorat </h2>
             <p className={styles.role}>CEO</p>
           </motion.div>
 
@@ -81,7 +82,7 @@ const AboutFounderSection = () => {
         <div className={styles.card}>
           <motion.div className={styles.imageBox} variants={imageAnim}>
             <div className={styles.imagePlaceholder}>
-              <img src={ceoImage} alt="Aarti Suryawanshi" loading="lazy" />
+              <img src={aaratiImage} alt="Aarti Suryawanshi" loading="lazy" />
             </div>
           </motion.div>
 
@@ -105,7 +106,7 @@ const AboutFounderSection = () => {
       >
         <div className={styles.top}>
           <motion.div className={styles.left} variants={fadeUp}>
-            <h2>Pooja Thorat</h2>
+            <h2>Aarti Suryawanshi</h2>
             <p className={styles.role}>Manager</p>
           </motion.div>
 
