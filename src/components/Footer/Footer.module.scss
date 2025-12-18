@@ -249,3 +249,16 @@
     text-align: center;
   }
 }
+.footer {
+  transition: background-color 0.4s ease;
+}
+
+/* Default pages */
+.defaultFooter {
+  background-color: #fffde8;
+}
+
+/* GES pages */
+.gesFooter {
+  background-color: #fef4f5;
+}

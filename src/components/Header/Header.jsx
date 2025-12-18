@@ -172,6 +172,7 @@ const Header = () => {
       <div className={styles.logoContainer}>
         <Link to="/" onClick={closeMenu}>
           <img
+            key={location.pathname} // 🔥 THIS IS IMPORTANT
             src={isGESPage ? GESLogo : logoImage}
             alt={isGESPage ? "GES Logo" : "Janikk International Logo"}
             className={styles.logo}
