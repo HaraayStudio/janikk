@@ -120,11 +120,12 @@ const ContactHero = () => {
           <div className={styles.contactCard}>
             <div>
               <strong>Email</strong>
-              <p>techteam@kawruh.com</p>
+              <p>info.ges@janikkintl.in </p> <p>janikk.intl@gmail.com</p>
             </div>
             <div>
               <strong>Phone</strong>
-              <p>(0252) 8324 9231</p>
+              <p>+91 8459865102 </p>
+              <p>+91 8698476373</p>
             </div>
           </div>
         </motion.div>
