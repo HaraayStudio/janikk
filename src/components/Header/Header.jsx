@@ -155,8 +155,9 @@ const Header = () => {
 
   // 🔹 Detect GES pages
   const isGESPage =
-    location.pathname === "/ges" || location.pathname.startsWith("/gesreg");
-
+    location.pathname === "/ges" ||
+    location.pathname == "/studentregister" ||
+    location.pathname == "/exibitorsregister";
   // Prevent body scroll when menu is open
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? "hidden" : "unset";

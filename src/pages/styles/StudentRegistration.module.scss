@@ -1,0 +1,120 @@
+@import "../../variables";
+@import "../../mixins";
+
+.overlay {
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-lg;
+  background-image: url("../../assets/images/Design.svg");
+  background-repeat: no-repeat;
+
+  background-size: cover;
+  background-position: center;
+  @include media("md", "down") {
+    padding: 0;
+  }
+  .card {
+    background: $color-background-white;
+    border-radius: 18px;
+    max-width: 760px;
+    width: 100%;
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  }
+
+  /* ---------- Header ---------- */
+  .header {
+    text-align: center;
+
+    span {
+      font-size: 0.85rem;
+      color: $color-text-light;
+    }
+
+    h1 {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      color: #ff1f2d;
+      font-weight: $font-weight-bold;
+      margin-top: 0.3rem;
+    }
+  }
+
+  .description {
+    font-size: 0.9rem;
+    color: $color-text-body;
+    text-align: justify;
+    margin: $spacing-md 0;
+  }
+
+  .formId {
+    font-size: 0.75rem;
+    color: $color-text-light;
+    margin-bottom: $spacing-md;
+  }
+
+  .sectionTitle {
+    font-weight: $font-weight-medium;
+    margin-bottom: $spacing-sm;
+  }
+
+  /* ---------- Form Grid ---------- */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-md;
+
+    @include media("md", "down") {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      font-size: 0.8rem;
+      margin-bottom: 4px;
+    }
+
+    input {
+      height: 44px;
+      padding: 0 14px;
+      border-radius: 999px;
+      border: 1px solid #ccc;
+      font-size: 0.9rem;
+
+      &:focus {
+        outline: none;
+        border-color: $color-brand-tertiary;
+      }
+    }
+  }
+
+  .error {
+    font-size: 0.7rem;
+    color: #ff1f2d;
+    margin-top: 4px;
+  }
+
+  /* ---------- Button ---------- */
+  .submitBtn {
+    width: 100%;
+    margin-top: $spacing-lg;
+    height: 46px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+
+    background-color: #ffd400;
+    font-weight: $font-weight-medium;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: darken(#ffd400, 8%);
+    }
+  }
+}

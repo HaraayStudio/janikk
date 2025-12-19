@@ -121,7 +121,9 @@ const Footer = () => {
 
   // 🔹 Detect GES pages
   const isGESPage =
-    location.pathname === "/ges" || location.pathname.startsWith("/gesreg");
+    location.pathname === "/ges" ||
+    location.pathname == "/studentregister" ||
+    location.pathname == "/exibitorsregister";
 
   useEffect(() => {
     const observer = new IntersectionObserver(

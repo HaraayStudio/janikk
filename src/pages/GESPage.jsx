@@ -215,10 +215,10 @@ export default function GESPage() {
 
           {/* Buttons */}
           <motion.div variants={cardVariants} className={styles.actions}>
-            <Link to="/register" className={styles.primaryBtn}>
+            <Link to="/studentregister" className={styles.primaryBtn}>
               Student Registration
             </Link>
-            <Link to="/register" className={styles.secondaryBtn}>
+            <Link to="/exibitorsregister" className={styles.secondaryBtn}>
               Exhibitor Registration
             </Link>
             <Link to="/register" className={styles.secondaryBtn}>

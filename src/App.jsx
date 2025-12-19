@@ -17,6 +17,8 @@ import GESPage from "./pages/GESPage.jsx";
 import ImmersionProgrammePage from "./pages/ImmersionProgrammePage.jsx";
 import GalleryPage from "./pages/GalleryPage.jsx";
 import ScrollToTop from "./ScrollToTop.jsx";
+import StudentRegistration from "./pages/StudentRegistration.jsx";
+import ExibitorsRegistration from "./pages/ExibitorsRegistration.jsx";
 
 // A Layout component to wrap pages with the Header and Footer
 const GlobalLayout = () => {
@@ -51,6 +53,10 @@ function App() {
           <Route path="ges" element={<GESPage />} />
           <Route path="immersion" element={<ImmersionProgrammePage />} />
           <Route path="gallery" element={<GalleryPage />} />
+          ExibitorsRegistration.jsx
+          <Route path="studentregister" element={<StudentRegistration />} />
+          <Route path="exibitorsregister" element={<ExibitorsRegistration />} />
+          {/* <Route path="exibitorsregister" element={<ExibitorsRegistration />} /> */}
           {/* Fallback route for 404 - Optional but recommended */}
           <Route
             path="*"
