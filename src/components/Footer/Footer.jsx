@@ -113,6 +113,7 @@ import { useLocation } from "react-router-dom";
 import styles from "./Footer.module.scss";
 import Logo from "../../assets/logo/logo.png";
 import { FiPhone, FiMail, FiInstagram, FiFacebook, FiX } from "react-icons/fi";
+import design from "../../assets/images/Designn.svg";
 
 const Footer = () => {
   const footerRef = useRef(null);
@@ -149,6 +150,7 @@ const Footer = () => {
         ${isGESPage ? styles.gesFooter : styles.defaultFooter}
       `}
     >
+      <img src={design} className={styles.design} alt="" />
       <div className={styles.top}>
         <div className={`${styles.brand} ${styles.reveal}`}>
           <img src={Logo} alt="Janikk International" />

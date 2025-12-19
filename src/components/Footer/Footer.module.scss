@@ -1,10 +1,25 @@
+@import "../../variables";
+@import "../../mixins";
+
 .footer {
+  position: relative;
   background: #fff3f2;
   padding: 60px 40px 30px;
   border-radius: 50px 50px 0 0;
   animation: fadeUp 0.8s ease forwards;
 }
-
+.design {
+  position: absolute;
+  top: 80%;
+  width: 100%;
+  left: 0;
+  opacity: 20%;
+  // object-fit: cover;
+  transform: rotate(180deg);
+  @include media("lg", "down") {
+    top: 90%;
+  }
+}
 @keyframes fadeUp {
   from {
     opacity: 0;
