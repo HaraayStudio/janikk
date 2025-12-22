@@ -30,10 +30,36 @@ const ImageCarousel = ({ images, text }) => {
 
           <div className={styles.arrows}>
             <button onClick={scrollPrev}>
-              <IoArrowBack />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 52 52"
+                fill="none"
+              >
+                <rect width="52" height="52" rx="26" fill="#FFDFDF" />
+                <path
+                  d="M21.7692 19L15 25.9747M15 25.9747L21.7692 33M15 25.9747H37"
+                  stroke="#610202"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
             </button>
             <button onClick={scrollNext}>
-              <IoArrowForward />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 52 52"
+                fill="none"
+              >
+                <rect width="52" height="52" rx="26" fill="#610202" />
+                <path
+                  d="M30.2308 33L37 26.0253M37 26.0253L30.2308 19M37 26.0253H15"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
             </button>
           </div>
         </div>

@@ -1,8 +1,9 @@
+@import "../variables";
+@import "../mixins";
 .wrapper {
   width: 100%;
   padding: 40px 0;
 }
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -14,24 +15,58 @@
     font-weight: 600;
   }
 }
-
 .arrows {
   display: flex;
-  gap: 10px;
+  gap: 12px;
+  align-items: center;
+  z-index: 5;
 
   button {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+    padding: 0;
     border: none;
-    background: #f1f1f1;
+    background: transparent;
     cursor: pointer;
+
     display: flex;
     align-items: center;
     justify-content: center;
 
-    &:hover {
-      background: #e3e3e3;
+    svg {
+      width: 52px;
+      height: 52px;
+      display: block;
+
+      rect {
+        fill: #ffdfdf; // DEFAULT COLOR
+        transition: fill 0.25s ease;
+      }
+
+      path {
+        transition: stroke 0.25s ease;
+      }
+    }
+
+    &:hover svg rect {
+      fill: #610202; // HOVER BACKGROUND
+    }
+
+    &:hover svg path {
+      stroke: #ffffff; // OPTIONAL: better contrast
+    }
+  }
+
+  /* Mobile */
+  @include media("md", "down") {
+    button {
+      width: 44px;
+      height: 44px;
+
+      svg {
+        width: 44px;
+        height: 44px;
+      }
     }
   }
 }
@@ -39,16 +74,13 @@
 .embla {
   overflow: hidden;
 }
-
 .container {
   display: flex;
   gap: 20px;
 }
-
 .slide {
   flex: 0 0 auto;
   cursor: pointer;
-
   img {
     height: 320px;
     width: auto;

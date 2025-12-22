@@ -41,7 +41,7 @@
     height: 100%;
     object-fit: cover; // Ensures the image covers the entire area without distortion
     display: block;
-    object-position: 50% 50%;
+    object-position: 50% 30%;
     @include media("md", "down") {
       object-fit: cover;
       width: 100%;
