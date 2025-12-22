@@ -9,7 +9,17 @@ import carImg2 from "../assets/images/Immersion/img2.jpg";
 import carImg3 from "../assets/images/Immersion/img3.jpg";
 import carImg4 from "../assets/images/Immersion/img4.jpg";
 import carImg5 from "../assets/images/Immersion/img5.jpg";
+import carouselImage2 from "../assets/images/jannik (2).png";
+import carouselImage3 from "../assets/images/jannik3.jpeg";
+import carouselImage4 from "../assets/images/jannik4.jpeg";
+import carouselImage5 from "../assets/images/jannik5.jpeg";
 const slides = [
+  {
+    id: 7,
+    imageUrl: carouselImage3,
+    title: "Innovative Learning",
+    caption: "Driving technological advancement in every curriculum.",
+  },
   {
     id: 1,
     imageUrl: carImg4,
@@ -37,6 +47,25 @@ const slides = [
   {
     id: 5,
     imageUrl: carImg5,
+    title: "Innovative Learning",
+    caption: "Driving technological advancement in every curriculum.",
+  },
+  {
+    id: 6,
+    imageUrl: carouselImage2,
+    title: "Innovative Learning",
+    caption: "Driving technological advancement in every curriculum.",
+  },
+
+  {
+    id: 8,
+    imageUrl: carouselImage4,
+    title: "Innovative Learning",
+    caption: "Driving technological advancement in every curriculum.",
+  },
+  {
+    id: 9,
+    imageUrl: carouselImage5,
     title: "Innovative Learning",
     caption: "Driving technological advancement in every curriculum.",
   },

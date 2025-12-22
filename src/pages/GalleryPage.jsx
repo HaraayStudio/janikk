@@ -44,6 +44,7 @@ import img25_jpg from "../assets/images/Gallary/img (25).JPG";
 import img27_jpg from "../assets/images/Gallary/img (27).jpg";
 import img28_jpg from "../assets/images/Gallary/img (28).jpg";
 import img29_jpg from "../assets/images/Gallary/img (29).jpg";
+import img30_jpg from "../assets/images/Gallary/newimg.jpeg";
 
 const IMAGES_PER_BATCH = 12;
 const GalleryHero = () => {
@@ -73,6 +74,7 @@ const GalleryHero = () => {
 
   const images = [
     img1_jpg,
+    img30_jpg,
     img1_jpeg,
     img2_jpg,
     img2_jpeg,

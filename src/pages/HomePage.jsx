@@ -5,6 +5,12 @@ import styles from "./styles/HomePage.module.scss";
 import mainAboutImage from "../assets/images/LandingPageAbout.jpg";
 import lowerAboutImage from "../assets/images/LandingPageAbout2.png";
 import immersionImage from "../assets/images/LandingPageImersion.png";
+import carouselImage from "../assets/images/jannik (1).png";
+import carouselImage2 from "../assets/images/jannik (2).png";
+import carouselImage3 from "../assets/images/jannik3.jpeg";
+import carouselImage4 from "../assets/images/jannik4.jpeg";
+import carouselImage5 from "../assets/images/jannik5.jpeg";
+
 // You will need to install react-icons for the lightbulb and gear icons
 // npm install react-icons
 import { GiLightBulb } from "react-icons/gi"; // For Mission
@@ -25,20 +31,32 @@ import img5_jpg from "../assets/images/Gallary/img (5).jpg";
 import img5_jpeg from "../assets/images/Gallary/img (5).jpeg";
 const slides = [
   {
+    id: 2,
+    imageUrl: carouselImage,
+    title: "Empowering Future Leaders",
+    caption: "Building confidence and global perspective for success.",
+  },
+  {
+    id: 3,
+    imageUrl: carouselImage2,
+    title: "Immersion Programme Excellence",
+    caption: "Hands-on cultural and academic experiences worldwide.",
+  },
+  {
+    id: 4,
+    imageUrl: carouselImage3,
+    title: "Immersion Programme Excellence",
+    caption: "Hands-on cultural and academic experiences worldwide.",
+  },
+  {
     id: 1,
     imageUrl: img1,
     title: "Innovative Learning",
     caption: "Driving technological advancement in every curriculum.",
   },
   {
-    id: 2,
-    imageUrl: img1,
-    title: "Empowering Future Leaders",
-    caption: "Building confidence and global perspective for success.",
-  },
-  {
-    id: 3,
-    imageUrl: img1,
+    id: 5,
+    imageUrl: carouselImage4,
     title: "Immersion Programme Excellence",
     caption: "Hands-on cultural and academic experiences worldwide.",
   },
