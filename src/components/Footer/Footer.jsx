@@ -111,7 +111,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import styles from "./Footer.module.scss";
-import Logo from "../../assets/logo/logo.png";
+import Logo from "../../assets/logo/logo.svg";
 import { FiPhone, FiMail, FiInstagram, FiFacebook, FiX } from "react-icons/fi";
 import design from "../../assets/images/Designn.svg";
 
