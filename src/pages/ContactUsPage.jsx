@@ -67,7 +67,7 @@ const ContactHero = () => {
           onSubmit={submit}
         >
           <span className={styles.kicker}>Get in Touch</span>
-          <h1>Let's Chat, Reach Out to Us</h1>
+          <h1> Reach Out to Us</h1>
           <p className={styles.subtitle}>
             Have questions or feedback? Send us a message and we’ll respond
             within 24 hours.

@@ -4,8 +4,8 @@ import styles from "./SubNavbar.module.scss";
 const sections = [
   { id: "introduction", label: "Introduction" },
   { id: "highlights", label: "Highlights" },
-  { id: "fees", label: "Participation Fees" },
   { id: "layout", label: "Floor Layout" },
+  { id: "fees", label: "Participation Fees" },
   { id: "contact", label: "Contact" },
 ];
 

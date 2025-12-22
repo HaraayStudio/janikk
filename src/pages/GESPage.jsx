@@ -135,7 +135,7 @@ export default function GESPage() {
           {/* Heading */}
           <motion.div variants={cardVariants} className={styles.heading}>
             <h2>Global Education Summit 2026</h2>
-            <p>Trusted by 500+ Global Leaders & Delegates</p>
+            {/* <p>Trusted by 500+ Global Leaders & Delegates</p> */}
           </motion.div>
 
           {/* Cards */}
@@ -327,7 +327,7 @@ export default function GESPage() {
         <section id="gallary" className={styles.gallarySection}>
           <ImageCarousel images={images} text={"3D Mockup Designs"} />
         </section>
-        <section className={styles.feesSection}>
+        <section id="fees" className={styles.feesSection}>
           <h2 className={styles.title}>Participation Fees</h2>
 
           <div className={styles.grid}>

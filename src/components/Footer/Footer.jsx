@@ -124,7 +124,8 @@ const Footer = () => {
   const isGESPage =
     location.pathname === "/ges" ||
     location.pathname == "/studentregister" ||
-    location.pathname == "/exibitorsregister";
+    location.pathname == "/exibitorsregister" ||
+    location.pathname == "/gwhmregister";
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -154,7 +155,7 @@ const Footer = () => {
       <div className={styles.top}>
         <div className={`${styles.brand} ${styles.reveal}`}>
           <img src={Logo} alt="Janikk International" />
-          <p>GLOBAL EDUCATIONAL SERVICES</p>
+          {/* <p>GLOBAL EDUCATIONAL SERVICES</p> */}
         </div>
 
         <div className={`${styles.col} ${styles.reveal}`}>

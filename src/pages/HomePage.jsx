@@ -12,7 +12,17 @@ import { FaCog } from "react-icons/fa"; // For Vision
 import GenericCarousel from "../components/GenericCarousel";
 import ImageCarousel from "../components/ImageCarousel";
 import FAQ from "../components/Faq";
-
+import { Link } from "react-router-dom";
+import img1_jpg from "../assets/images/Gallary/img (1).JPG";
+import img1_jpeg from "../assets/images/Gallary/img (1).jpeg";
+import img2_jpg from "../assets/images/Gallary/img (2).jpg";
+import img2_jpeg from "../assets/images/Gallary/img (2).jpeg";
+import img3_jpg from "../assets/images/Gallary/img (3).jpg";
+import img3_jpeg from "../assets/images/Gallary/img (3).jpeg";
+import img4_jpg from "../assets/images/Gallary/img (4).jpg";
+import img4_jpeg from "../assets/images/Gallary/img (4).jpeg";
+import img5_jpg from "../assets/images/Gallary/img (5).jpg";
+import img5_jpeg from "../assets/images/Gallary/img (5).jpeg";
 const slides = [
   {
     id: 1,
@@ -33,13 +43,32 @@ const slides = [
     caption: "Hands-on cultural and academic experiences worldwide.",
   },
 ];
+const containerVariant = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
 
 const cardVariant = {
   hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0 },
 };
 export default function HomePage() {
-  const images = [mainAboutImage, lowerAboutImage, lowerAboutImage];
+  const images = [
+    img1_jpg,
+    img1_jpeg,
+    img2_jpg,
+    img2_jpeg,
+    img3_jpg,
+    img3_jpeg,
+    img4_jpg,
+    img4_jpeg,
+    img5_jpg,
+    img5_jpeg,
+  ];
   const autoSlideInterval = 5000; // 5 seconds
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -147,18 +176,30 @@ export default function HomePage() {
             <h2>About Us</h2>
 
             <p>
-              Janikk International School is a private, progressive, innovative,
-              child centered, co-educational English medium school, committed to
-              providing quality education to all the students.
+              Janikk International Global Education Services (JIGES) is an
+              ambitious start up in educational and academic services, intending
+              to serve institutions with global connections. JIGES is an
+              organization established to assist Institutes, Colleges, and
+              Universities in India and Abroad. We are a renowned academic
+              consultant of India for International students seeking Quality
+              Education in India. We strive to provide the best education
+              options to students from India and abroad through our free
+              counselling sessions. We are also associated with multiple
+              universities from India and abroad. The company is a member of
+              Services Export Promotion Council, set up under ‘Ministry of
+              Commerce & Industry,’ Govt. of India.
             </p>
 
             <p>
-              The school offers Pre-primary, Primary and Secondary Education and
-              follows the CBSE curriculum, focusing on innovative and enriching
-              learning environments.
+              JIGES, is also an off-root firm Leisure Tourism Our parent
+              company, specialized operators in educational tours, industry
+              visits and academic assistance. We have been in the industry since
+              2009.
             </p>
 
-            <button className={styles.cta}>Know More</button>
+            <Link to="/about" className={styles.cta}>
+              Know More
+            </Link>
           </motion.div>
 
           {/* Image */}
@@ -174,7 +215,7 @@ export default function HomePage() {
           </motion.div>
         </motion.div>
       </section>
-      <section className={styles.missionSection}>
+      {/* <section className={styles.missionSection}>
         <motion.div
           className={styles.container}
           initial="hidden"
@@ -182,7 +223,7 @@ export default function HomePage() {
           viewport={{ once: true, amount: 0.35 }}
           transition={{ staggerChildren: 0.2 }}
         >
-          {/* Image */}
+        
           <motion.div
             className={styles.imageWrapper}
             variants={{
@@ -194,7 +235,6 @@ export default function HomePage() {
             <img src={lowerAboutImage} alt="Students learning together" />
           </motion.div>
 
-          {/* Content */}
           <div className={styles.cards}>
             <motion.div
               className={styles.card}
@@ -226,10 +266,12 @@ export default function HomePage() {
                 <h3>Mission</h3>
               </div>
               <p>
-                Our mission is to nurture responsible global citizens with
-                strong values, creativity, and a lifelong love for learning. We
-                provide holistic education through a comprehensive curriculum
-                and a dedicated faculty.
+                Our mission is to: * Provide high quality assistance for
+                academic excellence. * Create and cultivate long term
+                relationship with clients. * Cater to the changing requirements
+                of clients. * Achieve complete client satisfaction. * Update
+                ourselves with evolving technologies. * Maintain Professional
+                relationship with global partners.
               </p>
             </motion.div>
 
@@ -256,13 +298,114 @@ export default function HomePage() {
                 <h3>Vision</h3>
               </div>
               <p>
-                We aim to inspire and empower students through quality education
-                that nurtures curiosity, creativity, and confidence. Our vision
-                is to create a vibrant learning environment where innovation and
-                individuality thrive.
+                Emerge as an internationally acclaimed company for excellence in
+                quality education services. To establish a paradigm for
+                globalized education by integrated academic exchange.
+              </p>
+            </motion.div>
+            <motion.div
+              className={styles.card}
+              variants={cardVariant}
+              transition={{ duration: 0.6, delay: 0.1 }}
+            >
+              <div className={styles.header}>
+                <span className={styles.icon}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                  >
+                    <path
+                      d="M14.6801 2.33333C14.6801 2.68696 14.8205 3.02609 15.0706 3.27614C15.3206 3.52619 15.6598 3.66667 16.0134 3.66667C16.367 3.66667 16.7061 3.52619 16.9562 3.27614C17.2062 3.02609 17.3467 2.68696 17.3467 2.33333C17.3467 1.97971 17.2062 1.64057 16.9562 1.39052C16.7061 1.14048 16.367 1 16.0134 1C15.6598 1 15.3206 1.14048 15.0706 1.39052C14.8205 1.64057 14.6801 1.97971 14.6801 2.33333ZM16.0001 4.33333C15.3469 4.32821 14.7147 4.56296 14.2231 4.99305C13.7316 5.42314 13.415 6.01866 13.3334 6.66667C13.3257 6.71331 13.3277 6.76103 13.3392 6.80689C13.3506 6.85275 13.3713 6.89578 13.4001 6.93333C13.431 6.97053 13.4697 7.00054 13.5135 7.02126C13.5572 7.04198 13.605 7.05293 13.6534 7.05333H18.2801C18.3285 7.05293 18.3762 7.04198 18.4199 7.02126C18.4637 7.00054 18.5024 6.97053 18.5334 6.93333C18.5734 6.90099 18.606 6.86045 18.629 6.81445C18.652 6.76845 18.6648 6.71806 18.6667 6.66667C18.5851 6.01866 18.2685 5.42314 17.777 4.99305C17.2854 4.56296 16.6532 4.32821 16.0001 4.33333ZM27.3467 15.6667C27.3467 16.0203 27.4872 16.3594 27.7372 16.6095C27.9873 16.8595 28.3264 17 28.6801 17C29.0337 17 29.3728 16.8595 29.6229 16.6095C29.8729 16.3594 30.0134 16.0203 30.0134 15.6667C30.0134 15.313 29.8729 14.9739 29.6229 14.7239C29.3728 14.4738 29.0337 14.3333 28.6801 14.3333C28.3264 14.3333 27.9873 14.4738 27.7372 14.7239C27.4872 14.9739 27.3467 15.313 27.3467 15.6667ZM26.0401 20C26.0225 20.0422 26.0134 20.0876 26.0134 20.1333C26.0134 20.1791 26.0225 20.2244 26.0401 20.2667C26.071 20.3039 26.1097 20.3339 26.1535 20.3546C26.1972 20.3753 26.245 20.3863 26.2934 20.3867H30.9201C30.9685 20.3863 31.0162 20.3753 31.0599 20.3546C31.1037 20.3339 31.1424 20.3039 31.1734 20.2667C31.2038 20.2298 31.2265 20.1872 31.2402 20.1414C31.2539 20.0956 31.2584 20.0475 31.2534 20C31.2534 19.2928 30.9724 18.6145 30.4723 18.1144C29.9722 17.6143 29.294 17.3333 28.5867 17.3333C27.8795 17.3333 27.2012 17.6143 26.7011 18.1144C26.201 18.6145 25.9201 19.2928 25.9201 20H26.0401ZM14.6801 26.3333C14.6801 26.687 14.8205 27.0261 15.0706 27.2761C15.3206 27.5262 15.6598 27.6667 16.0134 27.6667C16.367 27.6667 16.7061 27.5262 16.9562 27.2761C17.2062 27.0261 17.3467 26.687 17.3467 26.3333C17.3467 25.9797 17.2062 25.6406 16.9562 25.3905C16.7061 25.1405 16.367 25 16.0134 25C15.6598 25 15.3206 25.1405 15.0706 25.3905C14.8205 25.6406 14.6801 25.9797 14.6801 26.3333ZM16.0001 28.3333C15.3469 28.3282 14.7147 28.563 14.2231 28.993C13.7316 29.4231 13.415 30.0187 13.3334 30.6667C13.3257 30.7133 13.3277 30.761 13.3392 30.8069C13.3506 30.8527 13.3713 30.8958 13.4001 30.9333C13.431 30.9705 13.4697 31.0005 13.5135 31.0213C13.5572 31.042 13.605 31.0529 13.6534 31.0533H18.2801C18.3285 31.0529 18.3762 31.042 18.4199 31.0213C18.4637 31.0005 18.5024 30.9705 18.5334 30.9333C18.5734 30.901 18.606 30.8605 18.629 30.8145C18.652 30.7685 18.6648 30.7181 18.6667 30.6667C18.5851 30.0187 18.2685 29.4231 17.777 28.993C17.2854 28.563 16.6532 28.3282 16.0001 28.3333ZM2.01339 15.6667C2.01339 16.0203 2.15386 16.3594 2.40391 16.6095C2.65396 16.8595 2.9931 17 3.34672 17C3.70034 17 4.03948 16.8595 4.28953 16.6095C4.53958 16.3594 4.68005 16.0203 4.68005 15.6667C4.68005 15.313 4.53958 14.9739 4.28953 14.7239C4.03948 14.4738 3.70034 14.3333 3.34672 14.3333C2.9931 14.3333 2.65396 14.4738 2.40391 14.7239C2.15386 14.9739 2.01339 15.313 2.01339 15.6667ZM3.34672 17.6667C2.6982 17.6681 2.07241 17.9058 1.58648 18.3352C1.10055 18.7647 0.787784 19.3566 0.70672 20C0.689117 20.0422 0.680054 20.0876 0.680054 20.1333C0.680054 20.1791 0.689117 20.2244 0.70672 20.2667C0.7377 20.3039 0.776411 20.3339 0.82016 20.3546C0.863909 20.3753 0.911647 20.3863 0.960054 20.3867H5.65339C5.70179 20.3863 5.74953 20.3753 5.79328 20.3546C5.83703 20.3339 5.87574 20.3039 5.90672 20.2667C5.93709 20.2298 5.95981 20.1872 5.97354 20.1414C5.98728 20.0956 5.99176 20.0475 5.98672 20C5.90566 19.3566 5.59289 18.7647 5.10696 18.3352C4.62103 17.9058 3.99524 17.6681 3.34672 17.6667ZM21.7867 10.6667C21.838 10.7869 21.9234 10.8895 22.0325 10.9615C22.1415 11.0336 22.2693 11.0721 22.4001 11.0721C22.5308 11.0721 22.6586 11.0336 22.7677 10.9615C22.8767 10.8895 22.9622 10.7869 23.0134 10.6667L23.1601 10.3733C23.1802 10.3214 23.2147 10.2762 23.2596 10.2432C23.3044 10.2101 23.3578 10.1905 23.4134 10.1867C23.4662 10.175 23.5211 10.1775 23.5726 10.1939C23.6241 10.2103 23.6704 10.24 23.7067 10.28C24.3282 10.9026 24.8742 11.5963 25.3334 12.3467C25.448 12.5507 25.6144 12.7209 25.8156 12.8403C26.0169 12.9596 26.2461 13.0239 26.4801 13.0267C26.7148 13.0242 26.9448 12.9598 27.1467 12.84C27.4517 12.6641 27.6747 12.3747 27.7671 12.035C27.8596 11.6953 27.8139 11.3328 27.6401 11.0267C26.8739 9.73075 25.8959 8.57247 24.7467 7.6C24.691 7.5516 24.6529 7.48606 24.6384 7.41367C24.6239 7.34127 24.6339 7.26612 24.6667 7.2L25.3067 5.86667C25.3618 5.74721 25.381 5.61435 25.3621 5.48419C25.3431 5.35403 25.2869 5.23216 25.2001 5.13333C25.1106 5.0365 24.9945 4.96835 24.8663 4.9375C24.7382 4.90664 24.6038 4.91448 24.4801 4.96L20.9334 6.29333C20.767 6.35376 20.6307 6.47672 20.5535 6.63608C20.4763 6.79543 20.4643 6.97861 20.5201 7.14667L21.7867 10.6667ZM4.64005 12.28C4.65298 12.4551 4.73443 12.618 4.86672 12.7333C4.99406 12.8492 5.16129 12.9113 5.33339 12.9067L9.10672 12.6667C9.23893 12.6594 9.36582 12.6122 9.47059 12.5313C9.57535 12.4503 9.65305 12.3394 9.69339 12.2133C9.73813 12.0906 9.74422 11.9571 9.71085 11.8307C9.67748 11.7044 9.60625 11.5913 9.50672 11.5067L8.49339 10.6667C8.4572 10.6377 8.42774 10.6013 8.40702 10.5599C8.3863 10.5184 8.37482 10.473 8.37339 10.4267C8.37399 10.3815 8.38375 10.337 8.40209 10.2957C8.42042 10.2545 8.44695 10.2174 8.48005 10.1867C9.29203 9.34911 10.2328 8.6469 11.2667 8.10667C11.429 8.03214 11.5746 7.92578 11.695 7.7939C11.8154 7.66202 11.908 7.5073 11.9675 7.33893C12.0269 7.17056 12.0519 6.99197 12.041 6.81375C12.0302 6.63553 11.9836 6.4613 11.9041 6.30142C11.8246 6.14154 11.7138 5.99925 11.5783 5.883C11.4427 5.76675 11.2852 5.67891 11.1151 5.62468C10.945 5.57045 10.7657 5.55095 10.5879 5.56732C10.4101 5.5837 10.2374 5.63562 10.0801 5.72C8.72538 6.39784 7.49477 7.29938 6.44005 8.38667C6.37842 8.44383 6.29745 8.4756 6.21339 8.4756C6.12932 8.4756 6.04836 8.44383 5.98672 8.38667L5.50672 8C5.40733 7.91383 5.28467 7.85899 5.15418 7.84238C5.02368 7.82577 4.89119 7.84814 4.77339 7.90667C4.65594 7.96582 4.55816 8.05776 4.4919 8.17135C4.42564 8.28495 4.39373 8.41531 4.40005 8.54667L4.64005 12.28ZM10.2667 24.5467C10.2437 24.41 10.1787 24.284 10.0807 24.186C9.98275 24.088 9.85668 24.023 9.72005 24C9.5882 23.981 9.45368 24.0027 9.33452 24.0623C9.21537 24.1218 9.11727 24.2164 9.05339 24.3333L8.74672 24.84C8.72125 24.8829 8.68646 24.9196 8.64492 24.9473C8.60338 24.975 8.55615 24.993 8.50672 25C8.45606 25.006 8.40469 25.0008 8.35629 24.9846C8.30789 24.9685 8.26365 24.9419 8.22672 24.9067C7.51753 24.1464 6.92041 23.2889 6.45339 22.36C6.2959 22.0436 6.01925 21.8027 5.68423 21.6902C5.34922 21.5777 4.98324 21.6028 4.66672 21.76C4.35035 21.9175 4.10944 22.1941 3.99694 22.5292C3.88443 22.8642 3.90953 23.2301 4.06672 23.5467C4.78766 24.9936 5.76322 26.2988 6.94672 27.4C6.99322 27.4588 7.01852 27.5317 7.01852 27.6067C7.01852 27.6817 6.99322 27.7545 6.94672 27.8133L6.29339 28.9333C6.2217 29.0422 6.1835 29.1697 6.1835 29.3C6.1835 29.4303 6.2217 29.5578 6.29339 29.6667C6.37337 29.7699 6.48088 29.8485 6.60354 29.8933C6.7262 29.9381 6.85902 29.9474 6.98672 29.92L10.6401 28.96C10.7251 28.9382 10.8049 28.8999 10.8751 28.8472C10.9452 28.7946 11.0043 28.7285 11.0489 28.653C11.0935 28.5774 11.1227 28.4938 11.1349 28.4069C11.1472 28.32 11.1421 28.2316 11.1201 28.1467L10.2667 24.5467ZM27.3734 22.9867C27.3605 22.9004 27.3304 22.8175 27.285 22.743C27.2395 22.6685 27.1796 22.6039 27.1087 22.553C27.0379 22.502 26.9576 22.4658 26.8725 22.4464C26.7874 22.427 26.6993 22.4248 26.6134 22.44L22.8801 23.0133C22.7499 23.0311 22.6281 23.0876 22.5306 23.1756C22.4331 23.2637 22.3644 23.379 22.3334 23.5067C22.3026 23.6343 22.3103 23.7682 22.3553 23.8916C22.4004 24.0149 22.4809 24.1222 22.5867 24.2L23.4134 24.8C23.4857 24.8666 23.5328 24.9561 23.5467 25.0533C23.5461 25.1486 23.5077 25.2397 23.4401 25.3067C22.6557 26.0806 21.7561 26.7282 20.7734 27.2267C20.5103 27.361 20.2993 27.5789 20.1734 27.8462C20.0476 28.1135 20.0141 28.415 20.0782 28.7034C20.1423 28.9918 20.3003 29.2507 20.5275 29.4395C20.7547 29.6284 21.0381 29.7364 21.3334 29.7467C21.541 29.7496 21.7465 29.7039 21.9334 29.6133C23.3293 28.9124 24.5925 27.974 25.6667 26.84C25.7276 26.7866 25.8058 26.7571 25.8867 26.7571C25.9677 26.7571 26.0459 26.7866 26.1067 26.84L26.8801 27.4C26.9918 27.4839 27.127 27.5305 27.2667 27.5333C27.3899 27.5305 27.5099 27.4936 27.6134 27.4267C27.76 27.3696 27.8804 27.2606 27.9517 27.1204C28.023 26.9803 28.0402 26.8187 28.0001 26.6667L27.3734 22.9867ZM10.0534 20.68C10.0056 20.8173 9.99163 20.9641 10.0125 21.108C10.0334 21.2519 10.0886 21.3886 10.1734 21.5067C10.2567 21.6231 10.3669 21.7178 10.4945 21.7828C10.6221 21.8478 10.7635 21.8811 10.9067 21.88H21.1067C21.2499 21.8811 21.3913 21.8478 21.5189 21.7828C21.6466 21.7178 21.7567 21.6231 21.8401 21.5067C21.9249 21.3886 21.98 21.2519 22.0009 21.108C22.0218 20.9641 22.0078 20.8173 21.9601 20.68C21.5284 19.4453 20.7235 18.3754 19.6569 17.6183C18.5903 16.8613 17.3147 16.4546 16.0067 16.4546C14.6988 16.4546 13.4231 16.8613 12.3565 17.6183C11.2899 18.3754 10.485 19.4453 10.0534 20.68ZM13.2934 12.8267C13.2934 13.5481 13.58 14.2399 14.0901 14.75C14.6002 15.2601 15.292 15.5467 16.0134 15.5467C16.7348 15.5467 17.4266 15.2601 17.9367 14.75C18.4468 14.2399 18.7334 13.5481 18.7334 12.8267C18.7334 12.1053 18.4468 11.4134 17.9367 10.9033C17.4266 10.3932 16.7348 10.1067 16.0134 10.1067C15.292 10.1067 14.6002 10.3932 14.0901 10.9033C13.58 11.4134 13.2934 12.1053 13.2934 12.8267Z"
+                      fill="#0E0202"
+                    />
+                  </svg>
+                </span>
+                <h3>Values</h3>
+              </div>
+              <p>
+                ✓ Excellence ✓ Integrity ✓Collaboration ✓ Sustainability
+                ✓Accountability
               </p>
             </motion.div>
           </div>
+        </motion.div>
+      </section> */}
+      <section className={styles.missionSection}>
+        {/* Heading */}
+        <motion.div
+          className={styles.header}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <span className={styles.kicker}>OUR FOUNDATION</span>
+          <h2>
+            Mission, Vision & Values That
+            <br />
+            Shape Global Education
+          </h2>
+        </motion.div>
+
+        {/* Cards */}
+        <motion.div
+          className={styles.cards}
+          variants={containerVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          {/* Mission */}
+          <motion.div className={styles.card} variants={cardVariant}>
+            <div className={styles.cardHeader}>
+              <span className={styles.icon}>🎯</span>
+              <h3>Mission</h3>
+            </div>
+            <ul>
+              <li>Provide high quality assistance for academic excellence.</li>
+              <li>
+                Create and cultivate long-term relationships with clients.
+              </li>
+              <li>Cater to the changing requirements of clients.</li>
+              <li>Achieve complete client satisfaction.</li>
+              <li>Update ourselves with evolving technologies.</li>
+              <li>Maintain professional relationships with global partners.</li>
+            </ul>
+          </motion.div>
+
+          {/* Vision */}
+          <motion.div className={styles.card} variants={cardVariant}>
+            <div className={styles.cardHeader}>
+              <span className={styles.icon}>🌍</span>
+              <h3>Vision</h3>
+            </div>
+            <p>
+              Emerge as an internationally acclaimed company for excellence in
+              quality education services.
+            </p>
+            <p>
+              Establish a paradigm for globalized education through integrated
+              academic exchange.
+            </p>
+          </motion.div>
+
+          {/* Values */}
+          <motion.div className={styles.card} variants={cardVariant}>
+            <div className={styles.cardHeader}>
+              <span className={styles.icon}>💎</span>
+              <h3>Values</h3>
+            </div>
+            <ul className={styles.values}>
+              <li>Excellence</li>
+              <li>Integrity</li>
+              <li>Collaboration</li>
+              <li>Sustainability</li>
+              <li>Accountability</li>
+            </ul>
+          </motion.div>
         </motion.div>
       </section>
       <section className={styles.immersionSection}>

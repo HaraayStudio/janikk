@@ -1,10 +1,10 @@
 .faqSection {
-  background: #fde7e1;
+  background: #fefff7;
   border-radius: 48px;
   padding: clamp(2rem, 5vw, 4rem);
   max-width: 1200px;
   margin: 0 auto;
-
+  margin-bottom: 50px;
   h2 {
     text-align: center;
     font-size: clamp(1.6rem, 3vw, 2.4rem);
@@ -21,14 +21,14 @@
 
   /* ---------- Item ---------- */
   .item {
-    background: #e9d3cd;
+    background: #f5f5f59f;
     border-radius: 14px;
     padding: 1.2rem 1.4rem;
     cursor: pointer;
     transition: background 0.3s ease;
 
     &.open {
-      background: #fff2ee;
+      background: #e7e7e79f;
     }
   }
 

@@ -1,0 +1,459 @@
+@import "../../variables";
+@import "../../mixins";
+.immersion {
+  width: 100%;
+  // height: 100vh;
+  overflow: hidden;
+}
+.heroSection {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 100dvh; // Default height for smaller screens
+  @include media("lg", "down") {
+    height: auto;
+  }
+  .carouselContainer {
+    display: flex;
+    height: 100%;
+  }
+
+  .sliderTrack {
+    display: flex;
+    height: 100%;
+    width: 100%; // Important: The track itself is 100% wide initially
+    transition: transform 0.6s ease-in-out;
+    will-change: transform; // Performance optimization
+  }
+
+  .slide {
+    flex-shrink: 0; // Ensures slides don't shrink
+    width: 100%; // Each slide occupies 100% of the container width
+    height: 100%;
+    position: relative;
+  }
+
+  .slideImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; // Ensures the image covers the entire area without distortion
+    display: block;
+    object-position: 10% 30%;
+  }
+
+  // ------------------------------------
+  // Text Overlay
+  // ------------------------------------
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    // Subtle gradient overlay for better text contrast
+    background-color: rgba($color-neutral-dark, 0.4);
+    color: $color-neutral-white;
+    padding: $spacing-xl;
+  }
+
+  .title {
+    font-size: $font-size-h2;
+    margin-bottom: $spacing-sm;
+
+    @include media("md") {
+      font-size: $font-size-h1; // Larger font on tablets+
+    }
+  }
+
+  .caption {
+    font-size: $font-size-base;
+    max-width: 80%;
+
+    @include media("md") {
+      font-size: $font-size-h5; // Slightly larger caption on tablets+
+    }
+  }
+
+  // ------------------------------------
+  // Navigation Dots
+  // ------------------------------------
+  .dotNavigation {
+    position: absolute;
+    bottom: $spacing-lg;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: $spacing-sm; // Space between dots
+    z-index: 10;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba($color-neutral-white, 0.5);
+    border: 1px solid $color-neutral-white;
+    border-radius: 50%;
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    &.activeDot {
+      background-color: $color-brand-secondary-01; // Active dot uses primary brand color
+      transform: scale(1.2);
+    }
+
+    &:hover {
+      background-color: rgba($color-neutral-white, 0.8);
+    }
+  }
+
+  // ------------------------------------
+  // Navigation Arrows (Optional)
+  // ------------------------------------
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba($color-neutral-dark, 0.5);
+    color: $color-neutral-white;
+    border: none;
+    padding: $spacing-md $spacing-sm;
+    cursor: pointer;
+    font-size: $font-size-h4;
+    z-index: 10;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: rgba($color-brand-secondary-01, 0.8);
+    }
+  }
+
+  .prev {
+    left: 0;
+    border-radius: 0 $border-radius-base $border-radius-base 0;
+  }
+
+  .next {
+    right: 0;
+    border-radius: $border-radius-base 0 0 $border-radius-base;
+  }
+}
+.Aboutsection {
+  padding: clamp(3rem, 6vw, 5rem) 0;
+  background-color: $color-background-white;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $spacing-lg;
+
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: clamp(2rem, 5vw, 4rem);
+
+    align-items: start;
+
+    /* Tablet */
+    @include media("lg", "down") {
+      grid-template-columns: 1fr 1.2fr;
+    }
+
+    /* Mobile */
+    @include media("md", "down") {
+      grid-template-columns: 1fr;
+      gap: 1.8rem;
+    }
+  }
+
+  /* ---------- Title ---------- */
+  .title {
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-weight: $font-weight-bold;
+    line-height: 1.25;
+    color: $color-text-heading;
+    margin: auto;
+  }
+
+  /* ---------- Content ---------- */
+  .content {
+    max-width: 640px;
+
+    p {
+      font-size: clamp(0.95rem, 1.05vw, 1rem);
+      line-height: 1.7;
+      color: $color-text-body;
+      margin-bottom: 1rem;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+.featuresSection {
+  background: #b8b6b62a;
+  border-radius: 36px;
+  padding: clamp(2.5rem, 6vw, 4rem);
+  max-width: 1200px;
+  margin: 0 auto;
+
+  h2 {
+    font-size: clamp(1.2rem, 2.6vw, 1.8rem);
+    font-weight: $font-weight-bold;
+    color: #1a0f0f;
+    margin-bottom: $spacing-lg;
+    max-width: 900px;
+  }
+
+  /* ---------- Grid ---------- */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+
+    /* Tablet */
+    @include media("lg", "down") {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Mobile */
+    @include media("md", "down") {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ---------- Card ---------- */
+  .card {
+    background: #b4b4b36b;
+    border-radius: 18px;
+    padding: 1.6rem;
+    min-height: 230px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+
+    h3 {
+      font-size: 1rem;
+      font-weight: $font-weight-bold;
+      color: #1a0f0f;
+    }
+
+    p {
+      font-size: 0.85rem;
+      line-height: 1.6;
+      color: #3a2c2c;
+    }
+  }
+
+  /* ---------- Icon ---------- */
+  .icon {
+    width: 40px;
+    height: 40px;
+    background: #ffd400;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 1.2rem;
+  }
+}
+.PlacesSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+
+  /* ---------- Each Domain ---------- */
+  .domain {
+    margin-bottom: 3rem;
+  }
+
+  .domainTitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    color: $color-text-heading;
+  }
+
+  /* ---------- Cards Grid ---------- */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.4rem;
+
+    @include media("md", "down") {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ---------- Card ---------- */
+  .card {
+    background: #f6f6f6;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+
+    img {
+      max-width: 100%;
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+  }
+
+  .cardBody {
+    padding: 1rem;
+
+    h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+    }
+
+    ul {
+      padding-left: 1rem;
+
+      li {
+        font-size: 0.8rem;
+        line-height: 1.5;
+        margin-bottom: 0.35rem;
+        color: $color-text-body;
+      }
+    }
+  }
+}
+
+.domainsSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: $spacing-xxl $spacing-lg;
+
+  @include media("md", "down") {
+    padding: $spacing-xl $spacing-md;
+  }
+
+  /* =====================================================
+   DOMAIN SECTION
+===================================================== */
+  .domain {
+    margin-bottom: $spacing-xxl;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-family: $font-family-primary;
+      font-size: $font-size-h5;
+      font-weight: $font-weight-bold;
+      color: $color-text-heading;
+      margin-bottom: $spacing-lg;
+
+      @include media("md", "down") {
+        font-size: $font-size-h6;
+      }
+    }
+  }
+
+  /* =====================================================
+   PROGRAM LIST
+===================================================== */
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+  }
+
+  /* =====================================================
+   PROGRAM CARD
+===================================================== */
+  .card {
+    background-color: $color-background-white;
+    border-radius: 14px;
+    padding: $spacing-lg $spacing-xl;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-shadow: $box-shadow-base;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba($color-neutral-dark, 0.15);
+    }
+
+    @include media("md", "down") {
+      padding: $spacing-md;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: $spacing-sm;
+    }
+  }
+
+  /* =====================================================
+   LEFT CONTENT
+===================================================== */
+  .card h3 {
+    font-family: $font-family-primary;
+    font-size: $font-size-base;
+    font-weight: $font-weight-medium;
+    color: $color-text-heading;
+    margin-bottom: $spacing-sm;
+
+    @include media("md", "down") {
+      font-size: $font-size-small;
+    }
+  }
+
+  /* =====================================================
+   META INFO (DURATION / INSTITUTE / LOCATION)
+===================================================== */
+  .meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: $spacing-md;
+
+    font-family: $font-family-primary;
+    font-size: $font-size-small;
+    color: $color-text-light;
+
+    span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    @include media("md", "down") {
+      gap: $spacing-sm;
+    }
+  }
+
+  /* =====================================================
+   OPTIONAL: RIGHT LOGO AREA (if you add later)
+===================================================== */
+  .cardImage {
+    flex-shrink: 0;
+
+    img {
+      height: auto;
+      width: 100px;
+      object-fit: contain;
+    }
+
+    @include media("md", "down") {
+      margin-top: $spacing-sm;
+
+      img {
+        height: 32px;
+      }
+    }
+  }
+}

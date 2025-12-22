@@ -152,6 +152,8 @@ const navItems = [
 const Header = () => {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [hideHeader, setHideHeader] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   // 🔹 Detect GES pages
   const isGESPage =
@@ -163,12 +165,36 @@ const Header = () => {
     document.body.style.overflow = isMenuOpen ? "hidden" : "unset";
     return () => (document.body.style.overflow = "unset");
   }, [isMenuOpen]);
+  useEffect(() => {
+    const handleScroll = () => {
+      // Desktop only
+      if (window.innerWidth < 992) return;
+
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 80) {
+        // scrolling down
+        setHideHeader(true);
+      } else {
+        // scrolling up
+        setHideHeader(false);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <header className={styles.header}>
+    <header
+      className={`${styles.header} ${hideHeader ? styles.hideHeader : ""}`}
+    >
       {/* 1. Logo Section */}
       <div className={styles.logoContainer}>
         <Link to="/" onClick={closeMenu}>

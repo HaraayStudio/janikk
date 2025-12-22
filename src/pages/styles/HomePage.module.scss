@@ -271,104 +271,225 @@
 }
 
 //mission section
+// .missionSection {
+//   padding: 49px 70px;
+//   background-color: white;
+//   @include media("lg", "down") {
+//     padding: 10px 5px;
+//   }
+//   /* ---------- Layout ---------- */
+//   .container {
+//     max-width: 1240px;
+//     margin: 0 auto;
+//     padding: 0 $spacing-lg;
+
+//     display: grid;
+//     grid-template-columns: 1fr 1fr;
+//     gap: clamp(2rem, 4vw, 4rem);
+//     align-items: center;
+
+//     /* Tablet: still 2 columns */
+//     @include media("lg", "down") {
+//       gap: 2rem;
+//     }
+
+//     /* Mobile */
+//     @include media("md", "down") {
+//       grid-template-columns: 1fr;
+//     }
+//   }
+
+//   /* ---------- Image ---------- */
+//   .imageWrapper {
+//     width: 100%;
+//     border-radius: 24px;
+//     overflow: hidden;
+//     height: clamp(300px, 35vw, 460px);
+
+//     img {
+//       width: 100%;
+//       height: 100%;
+//       object-fit: cover;
+//     }
+
+//     @include media("lg", "down") {
+//       height: 360px;
+//     }
+
+//     @include media("md", "down") {
+//       height: 260px;
+//     }
+//   }
+
+//   /* ---------- Cards ---------- */
+//   .cards {
+//     display: flex;
+//     flex-direction: column;
+//     gap: $spacing-lg;
+//   }
+
+//   /* ---------- Individual Card ---------- */
+//   .card {
+//     border-radius: 24px;
+//     background: var(--Colours-White-02, #f5f5f5);
+//     padding: clamp(1.5rem, 3vw, 2rem);
+
+//     box-shadow: $box-shadow-base;
+
+//     p {
+//       font-size: clamp(0.95rem, 1vw, 1rem);
+//       line-height: 1.7;
+//       color: $color-text-body;
+//       margin-top: $spacing-sm;
+//     }
+//   }
+
+//   /* ---------- Card Header ---------- */
+//   .header {
+//     display: flex;
+//     align-items: center;
+//     gap: $spacing-sm;
+
+//     h3 {
+//       font-size: clamp(1.2rem, 2vw, 1.5rem);
+//       font-weight: $font-weight-bold;
+//       color: $color-text-heading;
+//     }
+//   }
+
+//   .icon {
+//     width: 42px;
+//     height: 42px;
+//     border-radius: 50%;
+//     background-color: $color-brand-primary-03;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     font-size: 1.2rem;
+//   }
+// }
+
 .missionSection {
-  padding: 49px 70px;
-  background-color: white;
-  @include media("lg", "down") {
-    padding: 10px 5px;
-  }
-  /* ---------- Layout ---------- */
-  .container {
-    max-width: 1240px;
-    margin: 0 auto;
-    padding: 0 $spacing-lg;
+ 
+  padding: clamp(4rem, 8vw, 7rem) 1.5rem;
+  background: #fff8f4;
 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: clamp(2rem, 4vw, 4rem);
-    align-items: center;
 
-    /* Tablet: still 2 columns */
-    @include media("lg", "down") {
-      gap: 2rem;
-    }
+.header {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 3.5rem;
 
-    /* Mobile */
-    @include media("md", "down") {
-      grid-template-columns: 1fr;
-    }
+  .kicker {
+    letter-spacing: 0.15em;
+    font-size: 0.7rem;
+    color: #b8a399;
+    display: block;
+    margin-bottom: 0.6rem;
   }
 
-  /* ---------- Image ---------- */
-  .imageWrapper {
-    width: 100%;
-    border-radius: 24px;
-    overflow: hidden;
-    height: clamp(300px, 35vw, 460px);
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    @include media("lg", "down") {
-      height: 360px;
-    }
-
-    @include media("md", "down") {
-      height: 260px;
-    }
-  }
-
-  /* ---------- Cards ---------- */
-  .cards {
-    display: flex;
-    flex-direction: column;
-    gap: $spacing-lg;
-  }
-
-  /* ---------- Individual Card ---------- */
-  .card {
-    border-radius: 24px;
-    background: var(--Colours-White-02, #f5f5f5);
-    padding: clamp(1.5rem, 3vw, 2rem);
-
-    box-shadow: $box-shadow-base;
-
-    p {
-      font-size: clamp(0.95rem, 1vw, 1rem);
-      line-height: 1.7;
-      color: $color-text-body;
-      margin-top: $spacing-sm;
-    }
-  }
-
-  /* ---------- Card Header ---------- */
-  .header {
-    display: flex;
-    align-items: center;
-    gap: $spacing-sm;
-
-    h3 {
-      font-size: clamp(1.2rem, 2vw, 1.5rem);
-      font-weight: $font-weight-bold;
-      color: $color-text-heading;
-    }
-  }
-
-  .icon {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    background-color: $color-brand-primary-03;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
+  h2 {
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-weight: 500;
+    color: #2b1e1a;
+    line-height: 1.3;
   }
 }
 
+/* ---------- Cards Container ---------- */
+.cards {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  border-radius: 40px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+  }
+}
+
+/* ---------- Card ---------- */
+.card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.85),
+    rgba(255, 255, 255, 0.65)
+  );
+  border-radius: 22px;
+  padding: 2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2b1e1a;
+  }
+
+  p {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: #5a4a44;
+    margin-top: 0.8rem;
+  }
+
+  ul {
+    margin-top: 1rem;
+    padding-left: 1.2rem;
+
+    li {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: #5a4a44;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+/* ---------- Card Header ---------- */
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 0.5rem;
+
+  .icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f3e2d9;
+    display: grid;
+    place-items: center;
+    font-size: 1.1rem;
+  }
+}
+
+/* ---------- Values ---------- */
+.values {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.95rem;
+
+    &::before {
+      content: "✓";
+      color: #9c6b55;
+      font-weight: bold;
+    }
+  }
+}
+ 
+}
 //immersion section
 .immersionSection {
   padding: clamp(3rem, 6vw, 6rem) $spacing-md;

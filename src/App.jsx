@@ -58,6 +58,10 @@ function App() {
           <Route path="studentregister" element={<StudentRegistration />} />
           <Route path="exibitorsregister" element={<ExibitorsRegistration />} />
           <Route path="gwhmregister" element={<GWHMPage />} />
+          <Route
+            path="immersionprogramme"
+            element={<ImmersionProgrammePage />}
+          />
           {/* Fallback route for 404 - Optional but recommended */}
           <Route
             path="*"

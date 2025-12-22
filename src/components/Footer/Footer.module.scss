@@ -39,9 +39,20 @@
 }
 
 .brand {
+  display: flex;
+  // background-color: yellow;
+  justify-content: center;
+  align-items: center;
   img {
-    width: 140px;
+    // background-color: red;
+    width: 70%;
     margin-bottom: 10px;
+    @include media("xl", "down") {
+      width: 30%;
+    }
+    @include media("lg", "down") {
+      width: 50%;
+    }
   }
 
   p {
@@ -223,7 +234,7 @@
 }
 
 .brand img {
-  width: 140px;
+  // width: 140px;
 }
 
 .socials {

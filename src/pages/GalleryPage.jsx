@@ -24,7 +24,7 @@ import img10_jpg from "../assets/images/Gallary/img (10).jpg";
 import img10_jpeg from "../assets/images/Gallary/img (10).jpeg";
 import img11_jpg from "../assets/images/Gallary/img (11).jpg";
 import img11_jpeg from "../assets/images/Gallary/img (11).jpeg";
-import img12_jpg from "../assets/images/Gallary/img (12).jpg";
+// import img12_jpg from "../assets/images/Gallary/img (12).jpg";
 import img12_jpeg from "../assets/images/Gallary/img (12).jpeg";
 import img13_jpg from "../assets/images/Gallary/img (13).jpg";
 import img13_jpeg from "../assets/images/Gallary/img (13).jpeg";
@@ -40,7 +40,7 @@ import img22_jpg from "../assets/images/Gallary/img (22).JPG";
 import img23_jpg from "../assets/images/Gallary/img (23).jpg";
 import img24_jpg from "../assets/images/Gallary/img (24).JPG";
 import img25_jpg from "../assets/images/Gallary/img (25).JPG";
-import img26_jpg from "../assets/images/Gallary/img (26).JPG";
+// import img26_jpg from "../assets/images/Gallary/img (26).JPG";
 import img27_jpg from "../assets/images/Gallary/img (27).jpg";
 import img28_jpg from "../assets/images/Gallary/img (28).jpg";
 import img29_jpg from "../assets/images/Gallary/img (29).jpg";
@@ -94,7 +94,7 @@ const GalleryHero = () => {
     img10_jpeg,
     img11_jpg,
     img11_jpeg,
-    img12_jpg,
+    // img12_jpg,
     img12_jpeg,
     img13_jpg,
     img13_jpeg,
@@ -110,7 +110,7 @@ const GalleryHero = () => {
     img23_jpg,
     img24_jpg,
     img25_jpg,
-    img26_jpg,
+    // img26_jpg,
     img27_jpg,
     img28_jpg,
     img29_jpg,
@@ -126,18 +126,18 @@ const GalleryHero = () => {
         <div className={styles.container}>
           {/* Left Content */}
           <div className={styles.content}>
-            <span className={styles.badge}>Gallery</span>
-            <h1>Moments from Our Global Education Journey</h1>
-            <p>
-              Explore memorable highlights from our international education
-              summits, partnerships, and student engagements.
-            </p>
+            {/* <span className={styles.badge}>Gallery</span> */}
+            {/* <h1> Our Global Education Journey</h1> */}
+            <h1>
+              Explore highlights from our International education summits,
+              partnerships, and student engagements.
+            </h1>
           </div>
 
           {/* Right Image */}
           <div className={styles.imageWrapper}>
             <div className={styles.imagePlaceholder}>
-              <img src={HeroImg} alt="Gallery Hero" loading="eager" />
+              <img src={img10_jpg} alt="Gallery Hero" loading="eager" />
             </div>
           </div>
         </div>
