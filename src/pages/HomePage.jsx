@@ -6,9 +6,9 @@ import mainAboutImage from "../assets/images/LandingPageAbout.jpg";
 import lowerAboutImage from "../assets/images/LandingPageAbout2.png";
 import immersionImage from "../assets/images/LandingPageImersion.png";
 import carouselImage from "../assets/images/jannik (1).png";
-import carouselImage2 from "../assets/images/jannik (2).png";
+// import carouselImage2 from "../assets/images/jannik (2).png";
 import carouselImage3 from "../assets/images/jannik3.jpeg";
-import carouselImage4 from "../assets/images/jannik4.jpeg";
+// import carouselImage4 from "../assets/images/jannik4.jpeg";
 import carouselImage5 from "../assets/images/jannik5.jpeg";
 
 // You will need to install react-icons for the lightbulb and gear icons
@@ -42,12 +42,12 @@ const slides = [
     title: "Empowering Future Leaders",
     caption: "Building confidence and global perspective for success.",
   },
-  {
-    id: 3,
-    imageUrl: carouselImage2,
-    title: "Immersion Programme Excellence",
-    caption: "Hands-on cultural and academic experiences worldwide.",
-  },
+  // {
+  //   id: 3,
+  //   imageUrl: carouselImage2,
+  //   title: "Immersion Programme Excellence",
+  //   caption: "Hands-on cultural and academic experiences worldwide.",
+  // },
   {
     id: 4,
     imageUrl: carouselImage3,
@@ -55,12 +55,12 @@ const slides = [
     caption: "Hands-on cultural and academic experiences worldwide.",
   },
 
-  {
-    id: 5,
-    imageUrl: carouselImage4,
-    title: "Immersion Programme Excellence",
-    caption: "Hands-on cultural and academic experiences worldwide.",
-  },
+  // {
+  //   id: 5,
+  //   imageUrl: carouselImage4,
+  //   title: "Immersion Programme Excellence",
+  //   caption: "Hands-on cultural and academic experiences worldwide.",
+  // },
 ];
 const containerVariant = {
   hidden: {},
