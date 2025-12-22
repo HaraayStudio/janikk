@@ -9,6 +9,7 @@ import uk from "../assets/images/Immersion/uk.webp";
 import london from "../assets/images/Immersion/london.webp";
 import paris from "../assets/images/Immersion/paris.webp";
 import Switzerland from "../assets/images/Immersion/swiz.jpg";
+import iceland from "../assets/images/Immersion/iceland.jpg";
 // import delphi from "../assets/images/Immersion/delphi.png";
 // import Bicocca from "../assets/images/Immersion/Ulogo/Bicocca.png";
 // import Eit from "../assets/images/Immersion/Ulogo/Eit.png";
@@ -224,7 +225,7 @@ const domains = [
       },
       {
         location: "Iceland",
-        image: img1,
+        image: iceland,
         points: [
           "Ljósifoss Power Station Interactive Exhibition",
           "Hellisheiði Power Plant",
