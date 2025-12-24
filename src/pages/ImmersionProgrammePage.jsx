@@ -37,13 +37,13 @@ import { programDomains } from "./programDomains";
 const slides = [
   {
     id: 1,
-    imageUrl: carImg4,
+    imageUrl: carImg1,
     title: "Innovative Learning",
     caption: "Driving technological advancement in every curriculum.",
   },
   {
     id: 2,
-    imageUrl: carImg1,
+    imageUrl: carImg5,
     title: "Empowering Future Leaders",
     caption: "Building confidence and global perspective for success.",
   },
@@ -61,7 +61,7 @@ const slides = [
   },
   {
     id: 5,
-    imageUrl: carImg5,
+    imageUrl: carImg4,
     title: "Innovative Learning",
     caption: "Driving technological advancement in every curriculum.",
   },

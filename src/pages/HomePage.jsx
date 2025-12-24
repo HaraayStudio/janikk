@@ -195,7 +195,7 @@ export default function HomePage() {
             <h2>About Us</h2>
 
             <p>
-              Janikk International Global Education Services (JIGES) is an
+              Janikk International Global Educational Services (JIGES) is an
               ambitious start up in educational and academic services, intending
               to serve institutions with global connections. JIGES is an
               organization established to assist Institutes, Colleges, and

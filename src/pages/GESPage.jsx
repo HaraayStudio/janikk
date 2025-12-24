@@ -22,6 +22,7 @@ import img3 from "../assets/images/GES/DesignImg3.png";
 import img4 from "../assets/images/GES/DesignImg4.jpg";
 import typeAImg from "../assets/images/GES/TypeA.jpg";
 import typeBImg from "../assets/images/GES/TypeB.jpg";
+import InstagramFloat from "../components/InstagramFloat.jsx";
 
 const containerVariants = {
   hidden: {},
@@ -55,6 +56,7 @@ export default function GESPage() {
   const videoRef = useViewportVideoWithSound(0.6);
   return (
     <div className={styles.GESPage}>
+      <InstagramFloat />
       <div className={styles.heroSection}>
         <video src={video} ref={videoRef} autoPlay loop muted></video>
       </div>

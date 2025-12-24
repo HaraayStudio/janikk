@@ -185,7 +185,7 @@ const AboutFounderSection = () => {
 
           <motion.div className={styles.right} variants={fadeUp}>
             <p>
-              Welcome to Janikk International Global Education Services, where
+              Welcome to Janikk International Global Educational Services, where
               we strive to bridge the gap between aspiration and achievement by
               bringing global education opportunities to your doorstep. In an
               era where the world is more connected than ever, we believe that
@@ -261,7 +261,7 @@ const AboutFounderSection = () => {
           {/* Right */}
           <div className={styles.right}>
             <p>
-              Welcome to Janikk International Global Education Services, your
+              Welcome to Janikk International Global Educational Services, your
               gateway to global education. In today's interconnected world, we
               believe that education should transcend boundaries, encouraging
               cultural exchange and personal growth. At Janikk International, we
