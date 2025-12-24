@@ -196,7 +196,7 @@ const Footer = () => {
 
           <div className={styles.socials}>
             <a
-              href="https://www.instagram.com/your_instagram_username"
+              href="https://www.instagram.com/global.education.summit/"
               target="_blank"
               rel="noopener noreferrer"
             >

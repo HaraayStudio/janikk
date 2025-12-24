@@ -9,6 +9,7 @@ import uk from "../assets/images/Immersion/uk.webp";
 import london from "../assets/images/Immersion/london.webp";
 import paris from "../assets/images/Immersion/paris.webp";
 import Switzerland from "../assets/images/Immersion/swiz.jpg";
+import Czech from "../assets/images/Immersion/Czech.jpg";
 import iceland from "../assets/images/Immersion/iceland.jpg";
 // import delphi from "../assets/images/Immersion/delphi.png";
 // import Bicocca from "../assets/images/Immersion/Ulogo/Bicocca.png";
@@ -102,7 +103,7 @@ const domains = [
         location: "Singapore",
         image: singapore,
         points: [
-          "NE Water Recycling & Water Purification Plant",
+          "NeWater Recycling & Water Purification Plant",
           "Yakult Factory Tour",
           "Gardenia Bread Factory Tour",
           "Coffee Factory Production Tour",
@@ -122,7 +123,43 @@ const domains = [
       },
     ],
   },
-
+  {
+    title: "Mass Media",
+    cards: [
+      {
+        location: "Germany",
+        image: germany,
+        points: [
+          "Babelsberg Film Studios",
+          "ARD TV Studio Tour",
+          "Berlin Film Museum",
+          "Museum for Communication",
+          "German Museum of Technology",
+        ],
+      },
+      {
+        location: "Czech Republic",
+        image: Czech,
+        points: [
+          "Barrandov Film Studio",
+          "Czech Radio",
+          "Radio Free Europe – Behind-the-Scenes",
+          "Black Light Theatre Show",
+        ],
+      },
+      {
+        location: "London",
+        image: london,
+        points: [
+          "Animation Workshop at Chocolate Films",
+          "Full Day Workshop at London Film Academy / Sky Academy Studios",
+          "London Film Museum",
+          "Museum of Brands, Packaging & Advertising",
+          "BFI IMAX Theatre",
+        ],
+      },
+    ],
+  },
   {
     title: "Mechanical & Electrical Engineering",
     cards: [
@@ -138,19 +175,19 @@ const domains = [
         ],
       },
       {
-        location: "Singapore",
-        image: singapore,
+        location: "Northwest Europe",
+        image: europ,
         points: [
-          "Wien Energy Plant | Austria",
-          "Voestalpine Steelworks Factory | Austria",
-          "Rukl Glassworks Factory | Czech Republic",
-          "Tatra Trucks Plant | Czech Republic",
-          "Skoda Auto Factory | Czech Republic",
+          "Hydrema Hi-Tec Manufacturing | Denmark",
+          "KUKA Robotics Factory | Germany",
+          "Thyssenkrupp Steel Plant | Germany",
+          "Lutosa Frozen Foods | Belgium",
+          "Airbus Tour | France",
+          "EOL Wind Power Center | France",
         ],
       },
     ],
   },
-
   {
     title: "Automotive Engineering",
     cards: [
@@ -179,7 +216,6 @@ const domains = [
       },
     ],
   },
-
   {
     title: "Computer Science",
     cards: [
@@ -188,15 +224,15 @@ const domains = [
         image: london,
         points: [
           "National Museum of Computing",
-          "Meet An App Developer",
+          "Meet an App Developer",
           "Silicon Roundabout Tech Guided Tour",
-          "Tour & Workshop - Microsoft Flagship Store",
+          "Tour & Workshop – Microsoft Flagship Store",
           "Workshop on Social Media Platforms",
         ],
       },
       {
-        location: "Singapore",
-        image: singapore,
+        location: "Germany",
+        image: germany,
         points: [
           "Computer Spiele Museum",
           "BMW Motorcycle Plant",
@@ -207,7 +243,6 @@ const domains = [
       },
     ],
   },
-
   {
     title: "Science",
     cards: [
@@ -216,7 +251,7 @@ const domains = [
         image: Switzerland,
         points: [
           "World Meteorological Organization",
-          "CERN - European Organization for Nuclear Research",
+          "CERN – European Organization for Nuclear Research",
           "VSIG Energy Pavilion",
           "History of Science Museum",
           "Swiss Plasma Center",
@@ -232,12 +267,11 @@ const domains = [
           "Geothermal Green Houses",
           "The Northern Lights",
           "Hveragerði Geothermal Park",
-          "Perlan - Wonders Of Iceland",
+          "Perlan – Wonders of Iceland",
         ],
       },
     ],
   },
-
   {
     title: "Design & Technology",
     cards: [
@@ -261,13 +295,12 @@ const domains = [
           "Nissan Innovation Station",
           "Design Museum",
           "Victoria and Albert Museum Workshops",
-          "The Crystal - Urban Sustainability",
+          "The Crystal – Urban Sustainability",
           "Wembley Stadium Tour",
         ],
       },
     ],
   },
-
   {
     title: "Fine Arts",
     cards: [
@@ -293,12 +326,11 @@ const domains = [
           "Le Marais District Art Tour",
           "French Furniture & Objet d’Art Tour",
           "Saint-Germain Art & Design",
-          "Cinema Rex - Behind-the-Scenes",
+          "Cinema Rex – Behind-the-Scenes",
         ],
       },
     ],
   },
-
   {
     title: "Fashion & Design",
     cards: [
@@ -308,7 +340,7 @@ const domains = [
         points: [
           "Design Museum",
           "Museum of London",
-          "Fashion & Textile Museum",
+          "Fashion and Textile Museum",
         ],
       },
       {
@@ -319,37 +351,267 @@ const domains = [
           "Première Vision Textiles Exhibition",
           "Yves Saint Laurent Museum",
           "Galeries Lafayette Fashion Show",
-          "Fashion & Textile Museum",
+          "Fashion & Textiles Museum",
         ],
       },
     ],
   },
 
-  {
-    title: "Mass Media",
-    cards: [
-      {
-        location: "Germany",
-        image: germany,
-        points: [
-          "Design Museum",
-          "Museum of London",
-          "Fashion & Textile Museum",
-        ],
-      },
-      {
-        location: "Paris",
-        image: paris,
-        points: [
-          "Fashion Guided Walking Tour",
-          "Première Vision Textiles Exhibition",
-          "Yves Saint Laurent Museum",
-          "Galeries Lafayette Fashion Show",
-          "Fashion & Textile Museum",
-        ],
-      },
-    ],
-  },
+  // {
+  //   title: "Management & Commerce",
+  //   cards: [
+  //     {
+  //       location: "SINGAPORE",
+  //       image: singapore,
+  //       points: [
+  //         "NE Water Recycling & Water Purification Plant",
+  //         "Yakult Factory Tour",
+  //         "Gardenia Bread Factory Tour",
+  //         "Coffee Factory Production Tour",
+  //         "Brewery Tour",
+  //       ],
+  //     },
+  //     {
+  //       location: "Dubai",
+  //       image: dubai,
+  //       points: [
+  //         "Nakheel Properties",
+  //         "Unique Group Headquarters",
+  //         "Al Masaood Bergum Steel Manufacturing",
+  //         "Emaar Warehouse Operations",
+  //         "Tourism Operations & Fleet Management",
+  //       ],
+  //     },
+  //   ],
+  // },
+
+  // {
+  //   title: "Mechanical & Electrical Engineering",
+  //   cards: [
+  //     {
+  //       location: "Central Europe",
+  //       image: europ,
+  //       points: [
+  //         "Wien Energy Plant | Austria",
+  //         "Voestalpine Steelworks Factory | Austria",
+  //         "Rukl Glassworks Factory | Czech Republic",
+  //         "Tatra Trucks Plant | Czech Republic",
+  //         "Skoda Auto Factory | Czech Republic",
+  //       ],
+  //     },
+  //     {
+  //       location: "Singapore",
+  //       image: singapore,
+  //       points: [
+  //         "Wien Energy Plant | Austria",
+  //         "Voestalpine Steelworks Factory | Austria",
+  //         "Rukl Glassworks Factory | Czech Republic",
+  //         "Tatra Trucks Plant | Czech Republic",
+  //         "Skoda Auto Factory | Czech Republic",
+  //       ],
+  //     },
+  //   ],
+  // },
+
+  // {
+  //   title: "Automotive Engineering",
+  //   cards: [
+  //     {
+  //       location: "Germany",
+  //       image: germany,
+  //       points: [
+  //         "Volkswagen Factory & Plant",
+  //         "AMG Mercedes Museum & Factory",
+  //         "BMW Factory",
+  //         "Porsche Leipzig Tour",
+  //         "Airbus Manufacturing",
+  //         "Future Mobility Transparent Manufactory",
+  //       ],
+  //     },
+  //     {
+  //       location: "United Kingdom",
+  //       image: uk,
+  //       points: [
+  //         "Triumph Motorcycles Factory",
+  //         "Morgan Motor Company Factory",
+  //         "Aston Martin Behind-The-Scenes",
+  //         "Bentley Motors Factory",
+  //         "Land Rover Manufacturing",
+  //       ],
+  //     },
+  //   ],
+  // },
+
+  // {
+  //   title: "Computer Science",
+  //   cards: [
+  //     {
+  //       location: "London",
+  //       image: london,
+  //       points: [
+  //         "National Museum of Computing",
+  //         "Meet An App Developer",
+  //         "Silicon Roundabout Tech Guided Tour",
+  //         "Tour & Workshop - Microsoft Flagship Store",
+  //         "Workshop on Social Media Platforms",
+  //       ],
+  //     },
+  //     {
+  //       location: "Singapore",
+  //       image: singapore,
+  //       points: [
+  //         "Computer Spiele Museum",
+  //         "BMW Motorcycle Plant",
+  //         "German Museum of Technology",
+  //         "The Game Science Center",
+  //         "Berlin TV Tower",
+  //       ],
+  //     },
+  //   ],
+  // },
+
+  // {
+  //   title: "Science",
+  //   cards: [
+  //     {
+  //       location: "Switzerland",
+  //       image: Switzerland,
+  //       points: [
+  //         "World Meteorological Organization",
+  //         "CERN - European Organization for Nuclear Research",
+  //         "VSIG Energy Pavilion",
+  //         "History of Science Museum",
+  //         "Swiss Plasma Center",
+  //         "Geneva Observatory",
+  //       ],
+  //     },
+  //     {
+  //       location: "Iceland",
+  //       image: iceland,
+  //       points: [
+  //         "Ljósifoss Power Station Interactive Exhibition",
+  //         "Hellisheiði Power Plant",
+  //         "Geothermal Green Houses",
+  //         "The Northern Lights",
+  //         "Hveragerði Geothermal Park",
+  //         "Perlan - Wonders Of Iceland",
+  //       ],
+  //     },
+  //   ],
+  // },
+
+  // {
+  //   title: "Design & Technology",
+  //   cards: [
+  //     {
+  //       location: "Germany",
+  //       image: germany,
+  //       points: [
+  //         "Olympic Stadium Tour",
+  //         "Allianz Arena Tour",
+  //         "Bauhaus-Archiv Museum of Design",
+  //         "BMW AG Factory Tour and Museum",
+  //         "Deutsche Museum",
+  //         "KPM Welt",
+  //         "German Museum of Technology",
+  //       ],
+  //     },
+  //     {
+  //       location: "United Kingdom",
+  //       image: uk,
+  //       points: [
+  //         "Nissan Innovation Station",
+  //         "Design Museum",
+  //         "Victoria and Albert Museum Workshops",
+  //         "The Crystal - Urban Sustainability",
+  //         "Wembley Stadium Tour",
+  //       ],
+  //     },
+  //   ],
+  // },
+
+  // {
+  //   title: "Fine Arts",
+  //   cards: [
+  //     {
+  //       location: "London",
+  //       image: london,
+  //       points: [
+  //         "National Theatre Backstage Tour",
+  //         "Shakespeare’s Globe Theatre",
+  //         "Leighton House Museum",
+  //         "Tate Modern",
+  //         "Royal Shakespeare Company Backstage Tour",
+  //         "Shoreditch Street Art Tour",
+  //       ],
+  //     },
+  //     {
+  //       location: "Paris",
+  //       image: paris,
+  //       points: [
+  //         "Palais Garnier Opera House Backstage Tour",
+  //         "Street Art Tour Paris",
+  //         "Centre Pompidou",
+  //         "Le Marais District Art Tour",
+  //         "French Furniture & Objet d’Art Tour",
+  //         "Saint-Germain Art & Design",
+  //         "Cinema Rex - Behind-the-Scenes",
+  //       ],
+  //     },
+  //   ],
+  // },
+
+  // {
+  //   title: "Fashion & Design",
+  //   cards: [
+  //     {
+  //       location: "London",
+  //       image: london,
+  //       points: [
+  //         "Design Museum",
+  //         "Museum of London",
+  //         "Fashion & Textile Museum",
+  //       ],
+  //     },
+  //     {
+  //       location: "Paris",
+  //       image: paris,
+  //       points: [
+  //         "Fashion Guided Walking Tour",
+  //         "Première Vision Textiles Exhibition",
+  //         "Yves Saint Laurent Museum",
+  //         "Galeries Lafayette Fashion Show",
+  //         "Fashion & Textile Museum",
+  //       ],
+  //     },
+  //   ],
+  // },
+
+  // {
+  //   title: "Mass Media",
+  //   cards: [
+  //     {
+  //       location: "Germany",
+  //       image: germany,
+  //       points: [
+  //         "Design Museum",
+  //         "Museum of London",
+  //         "Fashion & Textile Museum",
+  //       ],
+  //     },
+  //     {
+  //       location: "Paris",
+  //       image: paris,
+  //       points: [
+  //         "Fashion Guided Walking Tour",
+  //         "Première Vision Textiles Exhibition",
+  //         "Yves Saint Laurent Museum",
+  //         "Galeries Lafayette Fashion Show",
+  //         "Fashion & Textile Museum",
+  //       ],
+  //     },
+  //   ],
+  // },
 ];
 // export const programDomains = [
 //   {
